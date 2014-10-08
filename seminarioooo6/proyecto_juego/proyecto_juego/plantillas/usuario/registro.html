@@ -1,0 +1,11 @@
+{%extends "base.thml"%}
+{%block container%}
+<h1>Registro</h1>
+
+<form action="" method="post" id='formulario'>
+	{{form.as_ul}}
+	{%csrf_token%}
+	{{formulario}}
+	<input type="submit" value="Enviar">
+</form>
+{%endblock%}
