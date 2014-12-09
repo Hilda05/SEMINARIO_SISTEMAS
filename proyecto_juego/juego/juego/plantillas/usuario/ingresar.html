@@ -1,0 +1,31 @@
+{%extends "base1.html"%}
+{{% block title %}
+	    <title>Login</title>
+{% endblock %}
+
+{%block container%}
+	<div class="row">
+		
+			<div class="span5">
+				{% if estado %}
+				<div class="alert alert-danger" role="alert">{{mensaje}}<span class="glyphicon glyphicon-warning-sign"></span></div>
+				{% endif %}
+
+
+				<form id='formulario' method='post' action=''>
+					
+					<table>
+						{% csrf_token %}
+						{{formulario}}
+					</table>
+					<div class="form-group">
+			  			<div class="col-sm-offset-2 col-sm-10">
+			  				{{formulario2.as_p}}
+			  			</div>
+			  		</div>
+					<p> <input class="btn-success btn-large " type='submit' value='ingresar'></p>
+				</form>
+			</div>
+		
+	</div>	
+{% endblock %}

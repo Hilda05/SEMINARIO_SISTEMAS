@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+ <html lang="es"> 
+ <head> 
+	 <meta charset="utf-8"> 
+	 {% block title %}<title>TriviaOnline.bo</title>{% endblock %} 
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	 <meta name="description" content=""> 
+	 <meta name="author" content=""> 
+	 
+	 
+	  
+	 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet"> 
+	 <style type="text/css"> 
+	 body { padding-top: 60px; padding-bottom: 40px;} 
+	 </style> 
+	 
+	 <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+	 
+	 <link href="{{ STATIC_URL }}style1.css" rel="stylesheet">
+	 
+	 
+	 
+ </head> 
+ 
+ 
+   <body > 
+ 
+ 
+	 <div class="navbar navbar-inverse navbar-fixed-top"> 
+	 	<div class="navbar-inner"> 
+	 		<div class="container"> 
+	             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+	 				<span class="icon-bar"></span> 
+	 				<span class="icon-bar"></span> 
+	 				<span class="icon-bar"></span> 
+	 			 </button>
+	 			
+				
+				
+	 			  <h6><a class="brand" href="/"><span>TriviaOnline.bo</span></a></h6>
+	 			 
+			 	    <div class="nav-collapse collapse"> 
+			 	    
+			          	<ul class="nav"> 
+			          	
+			 				<li class="#active"><a href="registrar">Registrar Usuario</a></li>
+			 				<!--<li><a href="#">About</a></li> 
+			 				<li>
+			 				<a href="#">Contactos</a>
+			 				</li>-->
+			 				<li class="#active"><a href="/ingresar">Login</a></li>
+			 				<!--<li class="#active"><a href="lista">Lista</a></li>--> 
+				 			{% if user.is_superuser %}
+				 			<li class="dropdown">
+						          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<span class="caret"></span></a>
+						          <ul class="dropdown-menu" role="menu">
+						            <li><a href="lista">Lista de Usuarios</a></li>
+						            <li><a href="tema">Registar Temas</a></li>
+						            <!--<li><a href="#">Something else here</a></li>-->
+						            
+						          </ul>
+						    </li>
+
+						    {% endif %}
+			 		     	
+			 			 </ul>
+			 			 
+                       
+ 			 	    </div>
+
+					
+	 		 </div> 
+	 	 </div> 
+	  </div>
+		
+      <div class="container"> 
+			
+     
+    <div id="this-carousel-id" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="">  <img src="{{STATIC_URL}}juego/bootstrap/img/1.jpg" />
+            </a>
+            <div class="carousel-caption">
+              <p>trivial1</p>
+              <p><a href=""></a>A</p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="{{STATIC_URL}}juego/bootstrap/img/2.jpg" />
+            </a>
+            <div class="carousel-caption">
+              <p>Trivial24</p>
+              <p><a href=""></a>B</p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="{{STATIC_URL}}juego/bootstrap/img/3.jpg"/>
+            </a>
+            <div class="carousel-caption">
+              <p>Trivial2</p>
+              <p><a href=""></a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <img src="{{STATIC_URL}}juego/bootstrap/img/4.jpg"/>
+            </a>
+            <div class="carousel-caption">
+              <p>trivial42</p>
+              <p><a href=""></a></p>
+            </div>
+          </div>
+        </div><!-- .carousel-inner -->
+        <!--  next and previous controls here
+              href values must reference the id for this carousel -->
+          <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+      </div><!-- .carousel -->
+      <!-- end carousel -->
+
+      <!-- Example row of columns -->
+      
+      <hr>
+
+    </div>
+
+    
+    <script>window.jQuery || document.write('<script src="{{STATIC_URL}}juego/bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}juego/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+
+	
+ <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+ <script src="{{ STATIC_URL }}js/jquery-1.11.1.min.js"></script>
+ <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script> 
+ 
+ 
+   </body>  
+  {{fecha}}	
+</html> 

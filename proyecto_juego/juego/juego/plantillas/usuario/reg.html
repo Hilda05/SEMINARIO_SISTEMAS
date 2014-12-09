@@ -1,0 +1,35 @@
+{% extends 'base1.html' %}
+{% block container %}
+<center><h3><font face="rockwell" size=5px>Registro de Usuario</font></h3><br>
+			<form action="" method="post" enctype='multipart/form-data' class="" style="color: #000000;">
+				{% csrf_token %}
+				{% for datos in formulario %}
+					{{datos.errors}}
+					<div class"control-group">
+						{{datos.label_tag}}
+						<div class="controls">
+							{{datos}}
+						</div>
+					</div>
+				{% endfor %}
+				
+				<br><br>
+				<table align='center' >
+					<tr>
+						<td align='right' width=150px><button type="submit",value="Guardar" class="">Guardar</button></td>
+						<td align='center' width=150px></td>
+						<td align='left' width=150px><button class=""type="reset",value="Borrar">Borrar</button></td>
+					</tr>
+				</table>
+			</form>
+			
+		</center>
+		
+	<script type="text/javascript">
+		$('label').addClass('control-label')
+
+	</script>
+
+	
+	</script>
+{% endblock  %}

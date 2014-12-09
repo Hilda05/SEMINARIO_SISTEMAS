@@ -1,0 +1,24 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>Modificar Cuenta</title>
+{% endblock %}
+
+{%block container%}
+	
+	<div class="container page">
+		<div class="row">
+			<div class="col-xs-12">
+			<form action="" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{ formulario.as_p }}
+				{{ formulario2.as_p }}
+				<button type="submit" class="btn btn-primary">Guardar</button>
+			</form>
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+

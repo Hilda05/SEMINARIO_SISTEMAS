@@ -1,0 +1,29 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>Registro</title>
+{% endblock %}
+
+{%block container%}
+
+	<div class="container page">
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="list-group">
+					<li class="list-group-item active">Listado de preguntas</li>
+					{% for i in preguntas %}
+						<li class="list-group-item">
+						<span class="label label-default">{{i.nombre}}</span>
+							<a href="/pregunta/edit/{{i.id}}/" class="btn btn-primary btn-xs">Editar preguntas</a>
+							<a href="/pregunta/eliminar/{{i.id}}/" class="btn btn-danger btn-xs" onclick="return confirm('¿Esta seguro de elimiar la pregunta?');">Eliminar pregunta</a>
+						<span class="badge">14</span>
+						</li>
+						{% empty %}
+						<h3>No existe preguntas</h3>
+					{% endfor %}
+					<h3><a href="/tema/">Volver a Los Temas</a></h3>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

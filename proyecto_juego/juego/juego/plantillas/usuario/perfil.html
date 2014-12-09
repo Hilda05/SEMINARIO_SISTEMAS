@@ -1,0 +1,26 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>Usuario</title>
+{% endblock %}
+
+{%block container%}
+	
+	<h3><a href="/">Volver al Inicio</a></h3>
+	<div class="container page">
+		<div class="row">
+			<div class="col-xs-12">
+			<h2>Bienvenido!!!: {{ user.get_full_name }}</h2><br>
+			<h2>Pais : {{user.perfil.pais }}</h2>
+			<h2>{{ user.email }}</h2>
+			<img src="/media/{{ user.perfil.avatar}}" alt="avatar">
+			<!-- <img src="{{ user.perfil.avatar.url_50x50}}" alt="avatar">
+			<img src="{{ user.perfil.avatar.url_200x200}}" alt="avatar"> -->
+			</div>
+		</div>
+		<h3><a href="/modificar/">Editar perfil</a></h3>
+		<h3><a href="/npass/">Editar Contraseña</a></h3>
+	</div>
+	
+	
+{% endblock %}

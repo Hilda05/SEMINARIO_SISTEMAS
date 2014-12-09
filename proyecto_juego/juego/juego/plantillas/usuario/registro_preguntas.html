@@ -1,0 +1,26 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>Registro</title>
+{% endblock %}
+{%block container%}
+
+	<div class="container page">
+		<div class="row">
+			<div class="col-xs-12">
+				{% if estado %}
+					<div class="alert alert-success" role="alert">Se a registrado la pregunta</div>
+				{% endif %}
+				<form action="" method="post">
+				<legend>{{ titulo }}</legend>
+					{{formulario.as_p}}
+				<legend>{{ titulo2 }}</legend>
+				{{formulario2.as_p}}
+					{% csrf_token %}
+					<input type="submit" name="benviar" value="Regitrar">
+					<h3><a href="/tema/">Volver a Los Temas</a></h3>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

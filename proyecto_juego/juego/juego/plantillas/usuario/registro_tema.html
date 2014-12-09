@@ -1,0 +1,40 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>Registro</title>
+{% endblock %}
+
+{%block container%}
+
+	{% if estado %}
+	    <div class="alert alert-success" role="alert"> se ha registrado el tema</div>
+	{% endif%}  
+
+	<form actin="" method="post">
+	<legend>{{ titulo }}</legend>	
+		{{formulario.as_p}}
+		{% csrf_token %}
+		<input type="submit" name="benviar" value="Registrar">
+	</form>
+	
+	<div class="row">
+			<div class="col-xs-12">
+				<ul class="list-group">
+					<li class="list-group-item active">Listado de Temas</li>
+					<ol>
+					{% for i in temas %}
+						<li class="list-group-item">
+						<span class="label label-default">{{i.nombre}}</span>
+							<a href="/tema/add/{{i.id}}/" class="">Agregar nueva pregunta</a>
+							<a href="/tema/edit/{{i.id}}/" class="">Ver preguntas</a>
+						<span class="badge">14</span>
+						</li>
+						{% empty %}
+						<h3>No existe temas</h3>
+					{% endfor %}
+					</ol>
+				</ul>
+			</div>
+		</div>
+	<h3><a href="/">Volver Atras </a></h3>	
+{% endblock %}
