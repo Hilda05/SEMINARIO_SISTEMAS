@@ -1,0 +1,58 @@
+form {
+	width: 33%;
+	border: 1px solid #ccc;
+	margin: 60px;
+	padding: 25px;
+	list-style: none;
+}
+label {
+	font-size:12px;
+	display:block;
+	width:150px;
+}
+input {
+	margin-bottom: 30px;
+	width: 100%;
+	padding: 10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border:1px solid #000000;
+}
+input:focus {
+	border:1px solid #1668C4;
+}
+button {
+	margin-bottom: 30px;
+	width: 100%;
+	padding: 10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border:1px solid #000000;
+}
+button[type="submit"]{
+	margin-bottom: 0;
+	background: #1668C4;
+	color:#fff;
+	border: none;
+}
+button[type="submit"]:hover{
+	background: #4A88F4;
+	cursor:pointer;
+}
+input[type="radio"]{
+	display:inline-block;
+	width:10px;
+}
+
+input[type="checkbox"]{
+	display: inline-block;
+	width:10px;
+}
+
+label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+}

@@ -1,0 +1,25 @@
+html{height: 100%;}
+body {
+    color: #fff;
+	background-image: url("images/wow-cataclysm.jpg");
+	font-family: verdana, arial, sans-serif;
+	padding: 50px;
+	margin: 0px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.contenido{
+	border: solid 1px green;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: block;
+	padding: 10px;
+	height: 400px;
+}
+#pagina{
+	margin: 0px auto; margin-top: 50px; border: solid 1px black; display: block; width:60%; height: 200px;  
+}

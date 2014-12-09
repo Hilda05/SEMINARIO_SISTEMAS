@@ -1,0 +1,64 @@
+extends layout
+block content
+
+	br
+	form#partida
+		label(class="control-label") Titulo 
+		input(type="text" name="partida")
+		br
+		label(class="control-label") Tipo de partida
+		br
+		input(type="radio" name="tipo" value="publico") 
+		label(class="control-label") Publico
+		br
+		input(type="radio" name="tipo" value="privado")
+		label(class="control-label") Privado 
+		br
+		label(class="control-label") Preguntas
+		<select name="entradalista">
+		<optgroup label="Seleccione Numero de Preguntas">
+		<option>10 Preguntas</option>
+		<option  selected="selected" >20 Preguntas</option>
+		<option>30 Preguntas</option>
+		<option>40 Preguntas</option>
+		<option>50 Preguntas</option>
+		</select>
+		br
+		label(class="control-label") Tiempo de respuesta 
+		<select name="entradalista1">
+		<optgroup label="Seleccione Tiempo">
+		<option  selected="selected" >10 Segundos</option>
+		<option>15 Segundos</option>
+		<option>20 Segundos</option>
+		<option>25 Segundos</option>
+		<option>30 Segundos</option>
+		<option>35 Segundos</option>
+		<option>40 Segundos</option>
+		<option>45 Segundos</option>
+		<option>50 Segundos</option>
+		<option>55 Segundos</option>
+		<option>60 Segundos</option>
+		</select> 
+		br
+		label(class="control-label") Categorias
+		br
+		input(type="checkbox" name="categorias" value="Arte y Literatura")
+		label(class="control-label") Arte  
+		br
+		input(type="checkbox" name="categorias" value="Cine y Television")
+		label(class="control-label") lenguaje
+		br
+		input(type="checkbox" name="categorias" value="Geografia") 
+		label(class="control-label") Matematicas
+		br
+		input(type="checkbox" name="categorias" value="Historia")
+		label(class="control-label") Peliculas 
+		br
+		input(type="checkbox" name="categorias" value="Miscelanea")
+		label(class="control-label") Tecnologia 
+		br
+		input(type="checkbox" name="categorias" value="Musica") 
+		label(class="control-label") Musica
+		br
+		button(type="submit") Crear Partida
+		button(type="submit") Cancelar
